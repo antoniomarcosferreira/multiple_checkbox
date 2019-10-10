@@ -1,7 +1,7 @@
 $(document).ready(function () {
   if (typeof multiple_action_ids !== "undefined") {
     var store_name = multiple_action_ids;
-    var ids = localStorage.getItem(store_name);
+    var ids = sessionStorage.getItem(store_name);
     var checked_count = 0;
     if (ids == undefined) ids = "";
 
@@ -16,7 +16,7 @@ $(document).ready(function () {
     $(".selectable").change(function () { set_selected(); });
 
     $("#multiple_action_unchek_all").click(function () {
-      localStorage.setItem(store_name, "");
+      sessionStorage.setItem(store_name, "");
       $(".selectable").prop("checked", false);
       set_selected();
     });
@@ -24,7 +24,7 @@ $(document).ready(function () {
 
     function set_selected() {
       var n = $(".selectable");
-      ids = localStorage.getItem(store_name);
+      ids = sessionStorage.getItem(store_name);
       if (ids == undefined) ids = "";
 
       var local_checked_count = 0;
@@ -56,7 +56,7 @@ $(document).ready(function () {
     multiple_action_update_values(ids, checked_count);
 
     function multiple_action_update_values(ids, checked_count) {
-      localStorage.setItem(store_name, ids);
+      sessionStorage.setItem(store_name, ids);
 
       if (ids.length > 0) {
         $("#multiple_action").show(200);
