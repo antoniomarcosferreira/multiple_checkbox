@@ -4,6 +4,8 @@ Save selections to localStorage
 
 This allows you to browse pagination or filters and select or deselect items
 
+**very simple and minimalist**
+
 
 ## To use
 
