@@ -16,3 +16,6 @@ To activate just create a variable on the page eg:
 * Then create a form named 'multiple_checkbox' and in the submit event send the values ​​of the variable that is in localStorage.
 * In your list create input checkbox with class: 'selectable'
 * At the top of the list create a checkbox with id: 'checkAll'
+
+
+- jquery is requered
